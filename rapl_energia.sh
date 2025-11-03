@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUTPUT_FILE="resultados_energia.csv"
-ITER=500
+OUTPUT_FILE="resultados_energia_testing.csv"
+ITER=5
 ENERGY_PATH="/sys/class/powercap/intel-rapl:0/energy_uj"
 
 # Lista de scripts exacta
 SCRIPTS=(
-  "Precision_doble.jl"
-  "Flotantes_precision_simple.jl"
-  "Precision_simple.jl"
-  "Flotantes_precision_doble.jl"
+  "32_Frank_lu.jl"
 )
 
 # Verificar acceso a medición de energía
